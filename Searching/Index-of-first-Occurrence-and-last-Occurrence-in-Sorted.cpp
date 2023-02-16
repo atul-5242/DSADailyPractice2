@@ -25,7 +25,31 @@ int first_occur(int arr[],int x,int size){
 }
 
 
+// //I tried but why it is wrong at 37 to 44.
+// int effc_first_occur(int arr[],int x,int l,int r){
+    
+//     if(l<=r){
+//         int mid;
+//         mid=l+(r-l)/2;
+//         if((mid==0 || x>arr[mid-1])&& arr[mid]==x){
+//                 return mid;
+//             }
+//         else if(arr[mid]>x){
+//             return effc_first_occur(arr,x,l,mid-1); 
+//         }
+//         else{
+//             return effc_first_occur(arr,x,mid+1,r);
+//         }
+        
+//     }
+//     return -1;
+// }
+                          
 
+
+
+
+// ==================================This is the changes that makes correct way then i don't know way this is correct:- =====================================
 int effc_first_occur(int arr[],int x,int l,int r){
     
     if(l<=r){
@@ -34,17 +58,22 @@ int effc_first_occur(int arr[],int x,int l,int r){
         if((mid==0 || x>arr[mid-1])&& arr[mid]==x){
                 return mid;
             }
-        else if(arr[mid]>x){
-            return effc_first_occur(arr,x,l,mid-1); 
+        else if(arr[mid]<x){
+            return effc_first_occur(arr,x,mid+1,r);
         }
         else{
-            return effc_first_occur(arr,x,mid+1,r);
+            return effc_first_occur(arr,x,l,mid-1); 
         }
         
     }
     return -1;
 }
-                          
+// --------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
 int main(){

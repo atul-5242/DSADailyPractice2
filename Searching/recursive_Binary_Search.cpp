@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+//By recursive Way:-
 int Binary_Search_recursive(int data,int arr[],int start,int end){
     if (start<end)
     {
@@ -24,6 +25,7 @@ int Binary_Search_recursive(int data,int arr[],int start,int end){
 int main(){
     int i=0,j=0,k=0;
     int arr[10]={1,2,3,4,5,6,7,8,9,10};
-    cout<<Binary_Search_recursive(99,arr,0,10)<<endl;
-    cout<<Binary_Search_recursive(9,arr,0,10)<<endl;
+    // 10-1=n-1
+    cout<<Binary_Search_recursive(99,arr,0,10-1)<<endl;
+    cout<<Binary_Search_recursive(9,arr,0,10-1)<<endl;
 }
