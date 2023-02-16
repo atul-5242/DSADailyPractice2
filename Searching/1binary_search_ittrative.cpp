@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 int Binary_search(int data,int arr[],int arr_len);
+//By Itration.
 int Binary_search(int data,int arr[],int arr_len){
     int mid,start=0,end=arr_len-1;
     while(start<=end){
