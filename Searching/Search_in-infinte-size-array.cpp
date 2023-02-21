@@ -23,18 +23,43 @@ int search_in_infinte(int arr[],int x){
 
 // Efficent Approch is:============================================================================>
 
+int Binary_Search_recursive(int data,int arr[],int start,int end){
+    if (start<end)
+    {
+    
+    int mid=(start+end)/2;
+    if (arr[mid]==data)
+    {
+        return mid+1;
+    }
+
+    if(data<arr[mid]){
+        return Binary_Search_recursive(data,arr,start,mid-1);
+    }
+    else if(data>arr[mid]){
+        return Binary_Search_recursive(data,arr,mid+1,end);
+    }
+        
+    }
+
+    return -1;
+}
+
 int Effi_search_in_infinte(int arr[],int x){
     // 1st we explicity handel 0 because we are trying to double the index so if not check that it is zero or not than it continuously we get zero to compare after multiplication with zero.
     if (arr[0]==x)
     {
         return 0;
     }
-    int i=0;
-    while(arr[i]>x){
-        i++;
+    int i=1;
+    while(arr[i]<x){
+        if (arr[i]==x)
+        {
+            return i;
+        }
+        i=i*2;
     }
-    
-    
+    return Binary_Search_recursive(x,arr,i/2,i);
 }
 
 
@@ -47,7 +72,7 @@ int main(){
     cout<<"Enter num:";
     cin>>num;
     string str;
-    if (search_in_infinte(arr,num)==-1)
+    if (search_in_infinte(arr,num)==-1 || Effi_search_in_infinte(arr,num)==-1 )
     {
         str="Elemnet is not present so return value is:";
     }
@@ -55,5 +80,6 @@ int main(){
         str="The Element is present at index";
     }
     cout<<str<<search_in_infinte(arr,num)<<endl;
+    cout<<str<<Effi_search_in_infinte(arr,num)<<endl;
     
 }
