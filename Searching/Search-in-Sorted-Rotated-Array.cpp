@@ -52,7 +52,6 @@ int Effi_SISRA(int arr[],int x,int size){
         }
     }    
     return -1;
-    
 }
 int main(){
     int i=0,j=0,k=0;
