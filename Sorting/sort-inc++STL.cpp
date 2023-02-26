@@ -102,6 +102,11 @@ int main(){
        cout<<i.x<<" "<<i.y<<endl;
     }
     
+    // sort function intrenally usedf quick sort.
+    // It use the hybride of 1.) Quick 2.) insertion 3.) Heap.
+    // if quick sort makes unfair partition or takes more than nlog(n) time than it switchs heap sort and if array size is small than it switches to insertion sort.
+
+    
 
 
 }

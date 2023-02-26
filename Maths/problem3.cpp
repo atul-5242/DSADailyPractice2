@@ -1,7 +1,7 @@
-// #include<iostream>
-// #include<vector>
-// #include<cmath>
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
+#include<cmath>
+// #include<bits/stdc++.h>
 using namespace std;
 class solution{
     public:
@@ -28,6 +28,4 @@ int main(){
     cout<<sqrt(16)<<endl;
      cout<<floor(112.87)<<endl;
      cout<<ceil(112.87)<<endl;
-
-
 }
