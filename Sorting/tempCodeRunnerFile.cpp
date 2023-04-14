@@ -1,44 +1,16 @@
-using namespace std;
-// int main(){
-//     int i=0,j=0,k=0;
-//     int arr[]={10,20,5,7};
-//     int n=4;//total number of elements 
-//     sort(arr,arr+(n-1)+1);//here (n-1) eqaul to the last index to that place we move the pointer and after that we added +1 to make the pointer move 1 position ahead to the last index.
-//     // cout<<*(arr+3);
-//     for (int i = 0; i < n; i++)
-//     {
-//         cout<<*(arr+i)<<" ";
-//     }
-//     // ---------------------------------------------------------------------------------------------------------
-//     // sort(arr,arr+(n-1)+1,(greater<int>));//see this line why error came.
-//     // ---------------------------------------------------------------------------------------------------------
+void Lomuto_Partition_modified(int arr[], int size, int pivote)//Most important algo............
+{
+    swap(arr[pivote],arr[size-1])
+    int i = -1;//because we don't know  how many smaller element is present so we take it -1 at starting we don't  know the smaller element so we assume that at satring we don't know how many smaller element so we don't know the smaller element window size so we take it as -1 in starting after that we are incease it .........
 
-// cout<<endl<<"Vector Start."<<endl;
-
-
-// // BY VECTOR:--------------------->
-
-//     vector<int>v={10,20,5,7};
-//     sort(v.begin(),v.end());
-//     for (auto i : v)
-//     {
-//         cout<<i<<" ";
-//     }
-//     // sort(v.begin(),v.end(),(greater<int>));----------------------------------------------------------->
-
-
-
-
-
-
-
-// cout<<"\nNew own comparision function:"<<endl;
-
-
-
-
-
-
-
-
-// }
+    
+    for (int j = 0; j < size - 1; j++)
+    {
+        if (arr[j] < pivote)
+        {
+            i++;
+            swap(arr[j], arr[i]);
+        }
+    }
+    swap(arr[i+1],arr[size-1]);
+}
