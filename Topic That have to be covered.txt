@@ -1,0 +1,18 @@
+Navie partition:---->
+
+https://practice.geeksforgeeks.org/batch/dsa-4/track/DSASP-Sorting/video/OTgz
+
+
+
+Kuch topic git log me hai whn se dekhna hai okey.......
+
+
+Chocolate Distribution Problem
+
+Quick Sort Introduction
+QuickSort analysis
+Space Analysis of QuickSort
+Choice of pivot and worst case of quick sort
+Tail call elimination in QuickSort      ------------    ye to samaj aya hi nhi .
+
+Kth Smallest Element    yhan se ye aur niche ke.
