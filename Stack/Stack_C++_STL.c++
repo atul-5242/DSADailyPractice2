@@ -26,8 +26,11 @@ int main(){
     // cout<<s.empty();
     cout<<"Here"<<endl;
     while (!s.empty())
+    // while (s.empty()==false)   <-- this can also be written
     {
         cout<<s.top()<<" ";
         s.pop();
     }
+
+    // all operations in stack like push pop top empty  is of O(1) <- T.C
 }
